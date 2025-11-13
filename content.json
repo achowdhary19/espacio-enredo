@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "name": "Una Piedra",
+      "folder": "assets/EE1/suspirotrampa WEB copy/",
+      "images": ["DSC_1317.png", "DSC_1318.png", "DSC_1319.png"]
+    },
+    {
+      "name": "Suspiro Trampa",
+      "folder": "assets/EE2/Web",
+      "images": ["EspacioEnredo-001W.jpg", "EspacioEnredo-002W.jpg", "EspacioEnredo-003bW.jpg"]
+    }
+  ]
+}
