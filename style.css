@@ -1,0 +1,82 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 5px 0px 5px 0px;
+  }
+  
+  .main{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap:40px;
+  }
+  p {
+      margin:0;
+      padding:0;
+  }
+  
+  [id="Q4028788695"] .page-content {
+      padding: 0rem 2rem 0rem 2rem;
+  }
+   bodycopy{
+      height: 100vh;
+      display: flex;
+  } 
+  .project-titles {
+     display:flex;
+     gap:100px;
+      width:100%;
+  }
+  .una-piedra, .suspiro-trampa{
+      display: flex;
+      gap:20px;
+         width: 45%; 
+  
+  }
+  .project-content, .una-piedra-content{
+      display: flex;
+      justify-content: center;
+      height: 78vh;
+      border: 1px solid purple;    
+      
+  }
+  .una-piedra-content img{
+      width: 10%;
+  }
+  
+  
+  
+  .hit-boxes{
+     position:absolute;
+     top: 100px;
+     height: 78vh;
+     width: 100%;
+    display: flex;
+      z-index:100;
+  }
+  
+  .left-hit{
+      
+      border: 1px solid purple; 
+      width:50%;
+  }
+  .right-hit{
+      
+      border: 1px solid purple; 
+      width:50%;
+  }
+  
+  .title-email{
+      position: fixed; /* Fixes the position relative to the viewport */
+      bottom: 0; 
+      width:100%;
+      height: auto; /* Example height */
+     /* border: 2px solid blue; Example border */
+      justify-content: space-around;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  
+  
