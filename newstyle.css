@@ -1,36 +1,3 @@
-html, body {
-   margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-body{
-  display: flex;
-  align-items: center;
-}
-
-
-h1,
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-font-size: 30px;
-}
-
-
-.grey{ color: #979797;
-}
-
-
-a:link, a:visited, a:hover, a:active {
-  color: black; /* or any other desired color, e.g., #000 for black */
-  text-decoration: none;
-}
 
 
 
@@ -54,12 +21,10 @@ These sit at the top and bottom of the viewport
 /* Titles list stays interactive */
 .project-titles-list {
   display: flex;
-  width: 100%;
   gap: 50px;
-  padding: 15px 15px 0px 15px;
+  padding: 15px;
   pointer-events: auto; /* re-enable clicks */
 }
-
 .project-name {
   display: flex;
   gap: 20px;
@@ -84,11 +49,7 @@ These sit at the top and bottom of the viewport
   justify-content: space-between;
   font-size: 30px;
   pointer-events: auto; /* re-enable clicks */
-  padding-bottom: 15px;
 }
-
-
-
 
 .title {
   padding-left: 15px;
@@ -97,22 +58,20 @@ These sit at the top and bottom of the viewport
   padding-right: 15px;
 }
 
-
-
 /* ------------------------------- */
 /*   MIDDLE CONTENT BLOCK
 /* ------------------------------- */
-/* PURPLE BOX PROJECT CONTENT IMAGES */
+
 .project-content {
   position: relative;
   width: 100%;
-  /* height: 78vh;  this messes things up */
+  height: 78vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  /* vertical  */
+  justify-content: flex-start; /* vertical center */
   align-items: center;
   z-index: 1; /* sits behind UI frame */
-  /* border: 1px solid purple; */
+  border: 1px solid purple;
 }
 
 
@@ -121,21 +80,21 @@ These sit at the top and bottom of the viewport
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 78vh;
-  /* width: 60%; */ 
+height: 100%;
 }
+
 .image-container img {
   max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  max-height: 100%;
+  object-fit: contain;
 }
+
 
 .pdf-viewer {
-
+  width: 300px;
+  /* height: 100%; */
   border: none;
-  z-index: 150; 
 }
-
 
 
 /* ------------------------------- */
@@ -149,14 +108,13 @@ These sit at the top and bottom of the viewport
   height: 97%;
   display: flex;
   z-index: 100;
-  justify-content: center;
 }
 
-
- /* GREEN BOX HIT BOXES */   
-.left-hit, .right-hit { 
-  width: 50%; 
-  /* border: 1px solid green;  */
+/* GREEN BOX HIT BOXES  */
+.left-hit,
+.right-hit {
+  width: 50%;
+  border: 1px solid green;
 }
 
 
@@ -165,30 +123,58 @@ These sit at the top and bottom of the viewport
 /* ------------------------------- */
 .pagination {
   width: 20%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
-   /* border: 1px solid blue ; */
-   margin-top: 20px;
 }
 
 .press-link { font-style: italic; }
 
-
-.download-icon
-{ max-width: 18px; 
-  display: flex; 
-}
 .download-icon img {
-  width: 100%;
+  width: 18px;
   height: auto;
   padding-left: 5px;
 }
+/* old
 
 
 
- .text { display: flex; gap: 5px; align-items: center; 
+
+.pdf-viewer {
+  border: none;
+  z-index: 150;
+  /* overflow: auto; */
 }
 
-
+.pagination{
+  display:flex;
+  /* border: 1px solid blue ;  */
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+.press-link{
+  font-style:italic;
+  
+}
  
+.text{
+  display:flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.download-icon{
+  max-width: 18px;
+  display: flex;
+}
+
+.download-icon img{
+  width: 100%;
+  padding-left:5px;
+  height: auto;
+}
+
+*/
+
+

@@ -121,8 +121,8 @@ function displayImage() {
   if (pdfIndex !== -1) {
     const pdfFile = folder + project.images[pdfIndex];
     paginationText.innerHTML = `
-      <a href="#" class="grey press-link">Press</a>
-      <a href="${pdfFile}" download class="grey download-icon" title="Download PDF"><img src="assets/dev/download.png"></a>
+      <a href="#" class="press-link">Press</a>
+      <a href="${pdfFile}" download class="grey download-icon" title="Download PDF"><img src="./assets/dev/download.png"></a>
     `;
   } else {
     paginationText.innerHTML = "";
