@@ -1,14 +1,34 @@
 {
   "projects": [
     {
-      "name": "Una Piedra",
-      "folder": "assets/EE1/suspirotrampa WEB copy/",
-      "images": ["DSC_1317.png", "DSC_1318.png", "DSC_1319.png"]
+      "name": "suspiro-trampa",
+      "folder": "assets/EE1/photos/",
+      "images": [
+        "DSC_1317.png",
+        "DSC_1324.png",
+        "DSC_1463.png",
+        "DSC_1479.png",
+        "ESPACIO ENREDO 001_SUSPIROTRAMPRESS RELEASE.pdf"
+      ],
+      "date": "12 05 2024"
     },
     {
-      "name": "Suspiro Trampa",
-      "folder": "assets/EE2/Web",
-      "images": ["EspacioEnredo-001W.jpg", "EspacioEnredo-002W.jpg", "EspacioEnredo-003bW.jpg"]
+      "name": "una piedra en el camino",
+      "folder": "assets/EE2/photos/",
+      "images": [
+        "EspacioEnredo-001W.jpg",
+        "EspacioEnredo-002W.jpg",
+        "EspacioEnredo-003bW.jpg",
+        "EspacioEnredo-003W.jpg",
+        "EspacioEnredo-004W.jpg",
+        "EspacioEnredo-005W.jpg",
+        "EspacioEnredo-006W.jpg",
+        "EspacioEnredo-007W.jpg",
+        "EspacioEnredo-008W.jpg",
+        "EspacioEnredo-009W.jpg",
+        "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
+      ],
+      "date": "05 01 2025"
     }
   ]
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Espacio Enredo</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <!-- LAYER 1: TOP + BOTTOM fixed spacing -->
@@ -32,6 +34,13 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+      $(function () {
+        var words = $(".project-name h1").text().split("");
+        for (i in words) words[i] = "<span>" + words[i] + "</span>";
+        var text = words.join("");
+        $(".project-name h1").html(text);
+      });
+    </script>
   </body>
 </html>

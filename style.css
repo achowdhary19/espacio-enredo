@@ -19,7 +19,8 @@ p {
 }
 
 h1 {
-font-size: 30px;
+  font-size: calc(1.3em + .7vw);
+  text-wrap: nowrap;
 }
 
 
@@ -56,10 +57,17 @@ These sit at the top and bottom of the viewport
   display: flex;
   width: 100%;
   gap: 50px;
-  padding: 15px 15px 0px 15px;
+  padding: 20px 20px 0px 20px;
   pointer-events: auto; /* re-enable clicks */
 }
 
+@media screen and (max-width: 750px) {
+      .project-titles-list {
+      flex-wrap: wrap;
+      gap: 10px;
+  
+    }
+}
 .project-name {
   display: flex;
   gap: 20px;
@@ -82,19 +90,21 @@ These sit at the top and bottom of the viewport
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
+  font-size: calc(1em + 1vw);
   pointer-events: auto; /* re-enable clicks */
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  align-items: flex-end;
+  text-wrap: nowrap;
 }
 
 
 
 
 .title {
-  padding-left: 15px;
+  padding-left: 20px;
 }
 .email {
-  padding-right: 15px;
+  padding-right: 20px;
 }
 
 
@@ -102,6 +112,7 @@ These sit at the top and bottom of the viewport
 /* ------------------------------- */
 /*   MIDDLE CONTENT BLOCK
 /* ------------------------------- */
+
 /* PURPLE BOX PROJECT CONTENT IMAGES */
 .project-content {
   position: relative;
@@ -124,6 +135,16 @@ These sit at the top and bottom of the viewport
   height: 78vh;
   /* width: 60%; */ 
 }
+@media screen and (max-width: 750px) {
+.image-container {
+  /* width: calc(100vw-.9em); why no work  */
+  width: 90%;
+    height: 50vh;
+}
+}
+
+
+
 .image-container img {
   max-width: 100%;
     max-height: 100%;
@@ -132,7 +153,7 @@ These sit at the top and bottom of the viewport
 
 .pdf-viewer {
 
-  border: none;
+  border: 1px solid black;
   z-index: 150; 
 }
 
@@ -172,6 +193,16 @@ These sit at the top and bottom of the viewport
    margin-top: 20px;
 }
 
+@media screen and (max-width: 750px) {
+      .pagination {
+     width: 250px;
+        margin-top: 20px;
+  
+    }
+}
+
+
+
 .press-link { font-style: italic; }
 
 
@@ -191,4 +222,14 @@ These sit at the top and bottom of the viewport
 }
 
 
- 
+/*  
+h1 {
+    font-size: 3em;
+}
+span {
+    border: 1px solid red;
+    margin-left: -5px;
+}
+span:nth-child(4) {
+    margin-left: 15px;
+} */

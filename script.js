@@ -1,100 +1,84 @@
-// --- Example data ---
-const projects = [
-  {
-    name: "suspiro trampa",
-    folder: "assets/EE1/photos/",
-    images: [
-      "DSC_1317.png",
-      "DSC_1324.png",
-      "DSC_1463.png",
-      "DSC_1479.png",
-      "ESPACIO ENREDO 001_SUSPIROTRAMPRESS RELEASE.pdf" // stays in cycle
-    ],
-    date: "12 05 2024"
-  },
-  {
-    name: "una piedra en el camino",
-    folder: "assets/EE2/photos/",
-    images: ["EspacioEnredo-001W.jpg",
-      "EspacioEnredo-002W.jpg",
-      "EspacioEnredo-003bW.jpg",
-      "EspacioEnredo-003W.jpg",
-      "EspacioEnredo-004W.jpg",
-      "EspacioEnredo-005W.jpg",
-      "EspacioEnredo-006W.jpg",
-      "EspacioEnredo-007W.jpg", 
-        "EspacioEnredo-008W.jpg", 
-        "EspacioEnredo-009W.jpg", 
-        "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
-    ],
-    date: "05 01 2025"
-  }
-];
+let projects = [];
 
-// --- DOM elements ---
-const titlesList = document.querySelector(".project-titles-list");
-const imageContainer = document.querySelector(".image-container");
-const leftHit = document.querySelector(".left-hit");
-const rightHit = document.querySelector(".right-hit");
-const pagination = document.querySelector(".pagination");
-const paginationText = document.querySelector(".pagination .text");
-const paginationCycle = document.querySelector(".pagination .cycle");
+// Load JSON content first
+fetch("content.json")
+  .then(response => response.json())
+  .then(data => {
+    projects = data.projects;
+    initializeProjects();
+  })
+  .catch(error => {
+    console.error("Error loading content.json", error);
+  });
 
+// DOM elements
+let titlesList, imageContainer, leftHit, rightHit, pagination, paginationText, paginationCycle;
 let currentProject = null;
 let currentIndex = 0;
 
-// --- Hide pagination by default ---
-pagination.style.display = "none";
+function initializeProjects() {
+  titlesList = document.querySelector(".project-titles-list");
+  imageContainer = document.querySelector(".image-container");
+  leftHit = document.querySelector(".left-hit");
+  rightHit = document.querySelector(".right-hit");
+  pagination = document.querySelector(".pagination");
+  paginationText = document.querySelector(".pagination .text");
+  paginationCycle = document.querySelector(".pagination .cycle");
 
-// --- Create title + date elements ---
-projects.forEach((project, index) => {
-  const projectDiv = document.createElement("div");
-  projectDiv.classList.add("project-name");
+  pagination.style.display = "none";
 
-  const title = document.createElement("h1");
-  title.classList.add("exhibit-name");
-  title.textContent = project.name;
+  projects.forEach((project, index) => {
+    const projectDiv = document.createElement("div");
+    projectDiv.classList.add("project-name");
 
-  const date = document.createElement("h1");
-  date.classList.add("date");
-  date.textContent = project.date;
+    const title = document.createElement("h1");
+    title.classList.add("exhibit-name");
+    // title.classList.add(`${project.name}`);
+    title.textContent = project.name;
 
-  projectDiv.appendChild(title);
-  projectDiv.appendChild(date);
-  titlesList.appendChild(projectDiv);
+    const date = document.createElement("h1");
+    date.classList.add("date");
+    date.textContent = project.date;
 
-  // --- When project title clicked ---
+    projectDiv.appendChild(title);
+    projectDiv.appendChild(date);
+    titlesList.appendChild(projectDiv);
+
   projectDiv.addEventListener("click", () => {
-    // Toggle off if same project clicked
     if (currentProject === index) {
       imageContainer.innerHTML = "";
       pagination.style.display = "none";
       currentProject = null;
       projectDiv.classList.remove("grey");
-
       return;
     }
 
     currentProject = index;
     currentIndex = 0;
+
+    // remove grey from all project titles first
+    document.querySelectorAll(".project-name").forEach(el => el.classList.remove("grey"));
+
     projectDiv.classList.add("grey");
     displayImage();
   });
-});
 
 
+  });
+
+  rightHit.addEventListener("click", nextImage);
+  leftHit.addEventListener("click", prevImage);
+}
 
 function displayImage() {
   const project = projects[currentProject];
 
-  imageContainer.innerHTML = ""; // clear old
-
+  imageContainer.innerHTML = "";
 
   const folder = project.folder.endsWith("/") ? project.folder : project.folder + "/";
   const currentFile = project.images[currentIndex];
   const fullPath = folder + currentFile;
 
-  // --- Handle image vs PDF ---
   if (currentFile.toLowerCase().endsWith(".pdf")) {
     const pdfEmbed = document.createElement("embed");
     pdfEmbed.src = fullPath;
@@ -110,19 +94,17 @@ function displayImage() {
     imageContainer.appendChild(img);
   }
 
-  // --- Show pagination ---
   pagination.style.display = "flex";
 
-  // --- Update text + counter ---
-  const pdfIndex = project.images.findIndex((file) =>
-    file.toLowerCase().endsWith(".pdf")
-  );
+  const pdfIndex = project.images.findIndex(f => f.toLowerCase().endsWith(".pdf"));
 
   if (pdfIndex !== -1) {
     const pdfFile = folder + project.images[pdfIndex];
     paginationText.innerHTML = `
       <a href="#" class="press-link">Press</a>
-      <a href="${pdfFile}" download class="grey download-icon" title="Download PDF"><img src="./assets/dev-files/download.png"></a>
+      <a href="${pdfFile}" download class="download-icon" title="Download PDF">
+        <img src="./assets/dev-files/download.png">
+      </a>
     `;
   } else {
     paginationText.innerHTML = "";
@@ -130,7 +112,6 @@ function displayImage() {
 
   paginationCycle.textContent = `${currentIndex + 1} / ${project.images.length}`;
 
-  // --- "press release" link jumps to PDF ---
   const pressLink = document.querySelector(".press-link");
   if (pressLink) {
     pressLink.addEventListener("click", (e) => {
@@ -141,8 +122,6 @@ function displayImage() {
   }
 }
 
-
-// --- Navigation (next/prev) ---
 function nextImage() {
   if (currentProject === null) return;
   const project = projects[currentProject];
@@ -157,6 +136,3 @@ function prevImage() {
   displayImage();
 }
 
-// --- Event listeners ---
-rightHit.addEventListener("click", nextImage);
-leftHit.addEventListener("click", prevImage);
