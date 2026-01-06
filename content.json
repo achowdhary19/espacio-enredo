@@ -29,6 +29,50 @@
         "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
       ],
       "date": "05 01 2025"
+    },
+    {
+      "name": "Concierto de Inauguración",
+      "folder": "assets/EE2/photos/",
+      "images": [
+        "EspacioEnredo-001W.jpg",
+        "EspacioEnredo-002W.jpg",
+                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
+
+      ],
+      "date": "05 29 2025"
+    }, {
+      "name": "Invasión Sonora",
+      "folder": "assets/EE2/photos/",
+      "images": [
+        "EspacioEnredo-001W.jpg",
+        "EspacioEnredo-002W.jpg",
+                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
+
+      ],
+      "date": "09 27 2025"
+    }, {
+      "name": ">>>.. . antes si",
+      "folder": "assets/EE2/photos/",
+      "images": [
+        "EspacioEnredo-001W.jpg",
+        "EspacioEnredo-002W.jpg",
+                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
+
+      ],
+      "date": "10 11 2025"
+    },  {
+      "name": "Trasfondo",
+      "folder": "assets/EE2/photos/",
+      "images": [
+        "EspacioEnredo-001W.jpg",
+        "EspacioEnredo-002W.jpg",
+                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
+
+      ],
+      "date": "12 11 2025"
     }
+    
+    
+    
   ]
 }

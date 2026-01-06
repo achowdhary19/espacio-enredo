@@ -14,8 +14,9 @@
       <div class="project-titles-list"></div>
 
       <div class="footer">
-        <p class="title">Espacio Enredo</p>
-        <p class="email">contact@email.com</p>
+        <a class="title" href="/home.html">Espacio Enredo</a>
+        <!-- <p class="title">Espacio Enredo</p> -->
+        <p class="email">espacio.enredo@gmail.com</p>
       </div>
     </div>
 
@@ -35,11 +36,12 @@
     </div>
 
     <script>
+      //when i was trying to space out the letters in fun ways but lets talk to Cristo and remove this
       $(function () {
-        var words = $(".project-name h1").text().split("");
+        var words = $(".project-name").text().split("");
         for (i in words) words[i] = "<span>" + words[i] + "</span>";
         var text = words.join("");
-        $(".project-name h1").html(text);
+        $(".project-name").html(text);
       });
     </script>
   </body>

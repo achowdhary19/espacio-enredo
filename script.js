@@ -21,11 +21,13 @@ function initializeProjects() {
   imageContainer = document.querySelector(".image-container");
   leftHit = document.querySelector(".left-hit");
   rightHit = document.querySelector(".right-hit");
+  hitboxes = document.querySelector(".hit-boxes");
   pagination = document.querySelector(".pagination");
   paginationText = document.querySelector(".pagination .text");
   paginationCycle = document.querySelector(".pagination .cycle");
 
   pagination.style.display = "none";
+  hitboxes.style.display="none";
 
   projects.forEach((project, index) => {
     const projectDiv = document.createElement("div");
@@ -56,7 +58,7 @@ function initializeProjects() {
     currentProject = index;
     currentIndex = 0;
 
-    // remove grey from all project titles first
+    // Remove grey from all project titles first
     document.querySelectorAll(".project-name").forEach(el => el.classList.remove("grey"));
 
     projectDiv.classList.add("grey");
@@ -75,6 +77,7 @@ function displayImage() {
 
   imageContainer.innerHTML = "";
 
+  //Constructing file paths to images so that client doesnt have to type whole path. This still could be optimized. 
   const folder = project.folder.endsWith("/") ? project.folder : project.folder + "/";
   const currentFile = project.images[currentIndex];
   const fullPath = folder + currentFile;
@@ -94,6 +97,9 @@ function displayImage() {
     imageContainer.appendChild(img);
   }
 
+
+  //Press link, press download, and image pagination 
+  hitboxes.style.display = "flex";
   pagination.style.display = "flex";
 
   const pdfIndex = project.images.findIndex(f => f.toLowerCase().endsWith(".pdf"));
@@ -110,6 +116,7 @@ function displayImage() {
     paginationText.innerHTML = "";
   }
 
+  //Dynamic image counter pagination 
   paginationCycle.textContent = `${currentIndex + 1} / ${project.images.length}`;
 
   const pressLink = document.querySelector(".press-link");
@@ -122,6 +129,8 @@ function displayImage() {
   }
 }
 
+
+//Invisible hitboxes to cycle through images. Disabled when no project is selected. 
 function nextImage() {
   if (currentProject === null) return;
   const project = projects[currentProject];
