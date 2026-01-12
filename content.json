@@ -10,7 +10,7 @@
         "DSC_1479.png",
         "ESPACIO ENREDO 001_SUSPIROTRAMPRESS RELEASE.pdf"
       ],
-      "date": "12 05 2024"
+      "date": "05 12 2024"
     },
     {
       "name": "una piedra en el camino",
@@ -28,51 +28,40 @@
         "EspacioEnredo-009W.jpg",
         "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
       ],
-      "date": "05 01 2025"
+      "date": "01 05 2025"
     },
     {
-      "name": "Concierto de Inauguración",
-      "folder": "assets/EE2/photos/",
+      "name": "Akoh Records Takeover",
+      "folder": "assets/EE3/",
       "images": [
-        "EspacioEnredo-001W.jpg",
-        "EspacioEnredo-002W.jpg",
-                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
-
+        "EE03_Akoh Records Showcase.pdf"
       ],
-      "date": "05 29 2025"
-    }, {
-      "name": "Invasión Sonora",
-      "folder": "assets/EE2/photos/",
+      "date": "29 05 2025"
+    },
+    {
+      "name": "Invasión Sonora:",
+      "folder": "assets/EE4/",
       "images": [
-        "EspacioEnredo-001W.jpg",
-        "EspacioEnredo-002W.jpg",
-                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
-
+        "EE04.pdf"
       ],
-      "date": "09 27 2025"
-    }, {
+      "date": "27 09 2025"
+    },  
+    {
       "name": ">>>.. . antes si",
-      "folder": "assets/EE2/photos/",
+      "folder": "assets/EE5/",
       "images": [
-        "EspacioEnredo-001W.jpg",
-        "EspacioEnredo-002W.jpg",
-                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
-
+        "EE05_antes si_Gisela Kundmuller.pdf"
       ],
-      "date": "10 11 2025"
-    },  {
+      "date": "11 11 2025"
+    }, 
+     {
       "name": "Trasfondo",
-      "folder": "assets/EE2/photos/",
-      "images": [
-        "EspacioEnredo-001W.jpg",
-        "EspacioEnredo-002W.jpg",
-                "ESPACIO ENREDO_PRESS RELEASE_SURFICIAL GEOLOGY.pdf"
-
+      "folder": "assets/EE6/",
+      "images": [ "EE06_Trasfondo_Bryan Heredia.pdf"
+        
       ],
       "date": "12 11 2025"
     }
-    
-    
     
   ]
 }
