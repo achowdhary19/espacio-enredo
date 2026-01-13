@@ -93,7 +93,7 @@ These sit at the top and bottom of the viewport
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: calc(1em + 1vw);
+  font-size: calc(1.2em + .7vw);
   pointer-events: auto; /* re-enable clicks */
   padding-bottom: 20px;
   align-items: flex-end;
