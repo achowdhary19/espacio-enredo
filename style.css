@@ -50,6 +50,7 @@ These sit at the top and bottom of the viewport
   justify-content: space-between; /* pushes top/ bottom apart */
   pointer-events: none; /* prevents blocking clicks on content */
   z-index: 500; /* most on top */
+
 }
 
 /* Titles list stays interactive */
@@ -157,7 +158,6 @@ These sit at the top and bottom of the viewport
 }
 
 .pdf-viewer {
-
   border: 1px solid black;
   z-index: 150; 
 }
