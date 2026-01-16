@@ -50,6 +50,7 @@ function initializeProjects() {
     if (currentProject === index) {
       imageContainer.innerHTML = "";
       pagination.style.display = "none";
+       hitboxes.style.display = "none";
       currentProject = null;
       projectDiv.classList.remove("grey");
       return;
