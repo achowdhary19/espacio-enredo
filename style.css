@@ -100,16 +100,16 @@ These sit at the top and bottom of the viewport
   align-items: flex-end;
   text-wrap: nowrap;
 }
-.about{
+/* .about{
   font-size: .7em;
-}
+} */
 
 
 
 .title {
   padding-left: 20px;
 }
-.email {
+.email, .about {
   padding-right: 20px;
 }
 
