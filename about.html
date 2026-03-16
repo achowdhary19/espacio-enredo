@@ -44,7 +44,7 @@
       </p>
       <div
         id="footer-shell"
-        style="width: 150%; display: flex; flex-direction: column; gap: 10px"
+        style="width: 100%; display: flex; flex-direction: column; gap: 20px"
       >
         <div
           id="mc_embed_shell"
@@ -65,32 +65,30 @@
             >
               <div
                 id="mc_embed_signup_scroll"
-                style="
-                  display: flex;
-
-                  align-items: center;
-                  gap: 10px;
-                "
+                style="display: flex; align-items: center; gap: 10px"
               >
-                <div class="mc-field-group">
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    class="required email"
-                    id="mce-EMAIL"
-                    required=""
-                    value="Email"
-                  />
-                </div>
                 <div class="mc-field-group">
                   <input
                     type="text"
                     name="FNAME"
                     class="text"
                     id="mce-FNAME"
-                    value="Name"
+                    value=""
+                    placeholder="Name"
                   />
                 </div>
+                <div class="mc-field-group">
+                  <input
+                    type="email"
+                    name="EMAIL"
+                    class="required_email"
+                    id="mce-EMAIL"
+                    required=""
+                    value=""
+                    placeholder="Email"
+                  />
+                </div>
+
                 <div id="mce-responses" class="clear foot">
                   <div
                     class="response"
@@ -119,11 +117,6 @@
                 <div class="optionalParent">
                   <div class="clear foot">
                     <input
-                      style="
-                        font-family: Times;
-
-                        /* text-transform: uppercase; */
-                      "
                       type="submit"
                       name="subscribe"
                       id="mc-embedded-subscribe"
@@ -161,7 +154,7 @@
           </div>
         </div>
 
-        <a href="home.html">
+        <a id="home-button" href="home.html">
           <svg
             width="24"
             height="24"
@@ -189,13 +182,18 @@
   }
 
   .email {
-    font-size: calc(0.5em + 0.5vw);
+    font-size: calc(0.8em + 0.3vw);
   }
 
   #mce-EMAIL,
-  #mce-FNAME {
+  #mce-FNAME,
+  #mc-embedded-subscribe {
+    font-size: calc(0.8em + 0.175vw);
+  }
+
+  ::placeholder {
     color: grey;
-    font-size: calc(0.3em + 0.5vw);
+    font-size: calc(0.6em + 0.175vw);
   }
 
   h1 {
@@ -205,11 +203,15 @@
   }
   p {
     font-family: Times;
-    font-size: calc(0.55em + 0.5vw);
+    font-size: calc(0.8em + 0.3vw);
   }
 
   input {
     font-size: calc(0.5em + 0.5vw);
+  }
+
+  #mc-embedded-subscribe {
+    font-family: Times;
   }
 
   .bio-container {
@@ -218,5 +220,17 @@
     flex-direction: column;
     gap: 15px;
     width: 500px;
+    border: 1px solid blue;
+  }
+
+  #home-button {
+    width: fit-content;
+    /* border: 1px solid blue; */
+  }
+
+  @media (max-width: 600px) {
+    .bio-container {
+      width: 90vw;
+    }
   }
 </style>
