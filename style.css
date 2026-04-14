@@ -62,14 +62,25 @@ These sit at the top and bottom of the viewport
   flex-wrap: wrap;
   padding: 20px 20px 0px 20px;
   pointer-events: auto; /* re-enable clicks */
+  box-sizing: border-box; /* total width = 100% (includes padding) So the padding stays inside the container instead of overflowing. */
 }
 
 @media screen and (max-width: 750px) {
       .project-titles-list {
+
       column-gap: 35px;
-       row-gap: 15px;
-    
-  
+      row-gap: 10px;
+      width: 100%;
+      padding:10px;
+    }
+
+    h1, a.title, a.about {
+      font-size: 1.185em ;
+      text-wrap:nowrap;
+    }
+
+    .footer{
+      padding: 0px 10px 15px 10px !important ; /*idk why this needs important  */
     }
 }
 .project-name {
@@ -96,21 +107,10 @@ These sit at the top and bottom of the viewport
   justify-content: space-between;
   font-size: calc(1.1em + .7vw);
   pointer-events: auto; /* re-enable clicks */
-  padding-bottom: 20px;
   align-items: flex-end;
   text-wrap: nowrap;
-}
-/* .about{
-  font-size: .7em;
-} */
-
-
-
-.title {
-  padding-left: 20px;
-}
-.email, .about {
-  padding-right: 20px;
+  box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
 }
 
 
@@ -128,8 +128,6 @@ These sit at the top and bottom of the viewport
   flex-direction: column;
   align-items: center;
   justify-content: center;  /* vertical  */
-  /* bottom: 10vh; */
-
   /* border: 1px solid purple; */
 }
 
@@ -143,11 +141,21 @@ These sit at the top and bottom of the viewport
   /* border: 1px solid purple; */
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
 .image-container {
   /* width: calc(100vw-.9em); why no work  */
   width: 90%;
-    height: 50vh;
+    height: 35vh;
+    margin-top:100px
+}
+
+/* .pagination{
+
+} */
+
+.hit-boxes{
+  height: 40vh !important; /* why need important?  */
+margin-top: 100px !important; /* why need important?  */
 }
 }
 
@@ -174,8 +182,7 @@ These sit at the top and bottom of the viewport
 .hit-boxes {
   position: absolute;
   display: flex;
-  /* top: 8vh; */
-  /* left: 0; */
+
   width: 100%;
   height: 70%;
   /* justify-content: center; */
