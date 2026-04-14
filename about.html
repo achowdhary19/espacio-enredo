@@ -123,7 +123,7 @@
                       class="button"
                       value="Join our newsletter"
                     />
-                    <p style="margin: 0px auto">
+                    <p style="margin: 0px">
                       <a
                         href="http://eepurl.com/jBBNFA"
                         title="Mailchimp - email marketing made easy and fun"
@@ -176,6 +176,10 @@
   </body>
 </html>
 <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
   a {
     color: hsl(0, 0%, 0%);
     font-size: calc(0.5em + 0.7vw);
@@ -215,7 +219,8 @@
   }
 
   .bio-container {
-    margin: 20px;
+    box-sizing: border-box;
+    padding: 15px !important;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -228,9 +233,12 @@
     /* border: 1px solid blue; */
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     .bio-container {
-      width: 90vw;
+      width: 100vw;
     }
+    /* #mc-embedded-subscribe {
+      content: "Join";
+    } */
   }
 </style>
